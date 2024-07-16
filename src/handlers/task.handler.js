@@ -28,7 +28,6 @@ taskHandler.getTaskById = async (req , res) => {
     if(identifiedTask.length === 0) {
         return res.status(404).json({
             status:false,
-            data: ["Task Id not found"],
             message: "Task Id not found"
         })
     }
@@ -138,7 +137,6 @@ taskHandler.deleteTaskById = async (req , res) => {
     if(idx < 0) {
         return res.status(404).json({
             status:false,
-            data: ["Task Id not found"],
             message: "Task Id not found"
         })
     }
